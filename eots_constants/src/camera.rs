@@ -1,0 +1,4 @@
+pub const DEFAULT_CAMERA_PROJECTION_SCALE: f32 = 1.0 / 32.0;
+pub const MIN_CAMERA_SCALE: f32 = 0.02;
+pub const MAX_CAMERA_SCALE: f32 = 0.25;
+pub const CAMERA_ZOOM_SPEED: f32 = 0.005;

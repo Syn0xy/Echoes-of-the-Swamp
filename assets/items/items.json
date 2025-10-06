@@ -1,0 +1,40 @@
+[
+    {
+        "id": 0,
+        "name": "Lotus",
+        "description": "",
+        "sprite_path": "items/lotus.png",
+        "max_stack": null,
+        "effects": [
+            {
+                "Heal": {
+                    "amount": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Rose",
+        "description": "",
+        "sprite_path": "items/rose.png",
+        "max_stack": null,
+        "effects": []
+    },
+    {
+        "id": 2,
+        "name": "Vine",
+        "description": "",
+        "sprite_path": "items/vine.png",
+        "max_stack": null,
+        "effects": []
+    },
+    {
+        "id": 3,
+        "name": "Worm",
+        "description": "",
+        "sprite_path": "items/worm.png",
+        "max_stack": 1,
+        "effects": []
+    }
+]

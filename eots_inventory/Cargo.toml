@@ -1,0 +1,10 @@
+[package]
+name = "eots_inventory"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eots_asset_manager = { workspace = true }
+eots_item = { workspace = true }
+bevy = { workspace = true }
+rand = { workspace = true }

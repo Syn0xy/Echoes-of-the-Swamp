@@ -1,0 +1,9 @@
+[package]
+name = "eots_asset_manager"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eots_item = { workspace = true }
+bevy = { workspace = true }
+serde_json = { workspace = true }
