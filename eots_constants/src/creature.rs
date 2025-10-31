@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use eots_skeleton_rig::descriptions::SkeletonRigDescription;
+use eots_skeleton_rig::SkeletonRigDescription;
 
 mod fly;
 mod frog;

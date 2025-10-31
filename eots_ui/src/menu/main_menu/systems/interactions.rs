@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 use eots_core::states::{AppState, GameState};
 
-use crate::ui::menu::main_menu::{
+use crate::menu::main_menu::{
     components::{PlayButton, QuitButton},
     styles::{HOVERED_BUTTON_COLOR, NORMAL_BUTTON_COLOR, PRESSED_BUTTON_COLOR},
 };

@@ -1,6 +1,5 @@
 use eots_skeleton_rig::{
-    SegmentDescription,
-    descriptions::{SegmentType, SkeletonRigDescription, SkeletonSegmentDescription},
+    SegmentDescription, SegmentType, SkeletonRigDescription, SkeletonSegmentDescription,
 };
 
 use crate::creature::CreatureData;
@@ -23,6 +22,7 @@ pub(super) const DATA: CreatureData = CreatureData {
 };
 
 pub(super) const SKELETON_RIG: SkeletonRigDescription = SkeletonRigDescription {
+    segment_chain_constraint: 2.0,
     segments: &[
         ONE_LEGS_PART,
         ONE_LEGS_PART,

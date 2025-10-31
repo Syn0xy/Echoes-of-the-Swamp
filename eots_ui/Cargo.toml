@@ -1,10 +1,10 @@
 [package]
-name = "eots_core"
+name = "eots_ui"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 eots_constants.workspace = true
-rand.workspace = true
+eots_core.workspace = true
 bevy.workspace = true
-strum.workspace = true
+bevy-inspector-egui.workspace = true

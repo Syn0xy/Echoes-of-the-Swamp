@@ -1,17 +1,18 @@
 use bevy::prelude::*;
 
-use crate::{SpawnerManager};
+use crate::SpawnerManager;
 
 pub struct SpawnerPlugin;
 
 impl Plugin for SpawnerPlugin {
     fn build(&self, app: &mut App) {
         app.insert_resource(SpawnerManager::default())
-            .add_systems(Update, update_spawners);
+        // .add_systems(Update, update_spawners)
+        ;
     }
 }
 
-fn update_spawners(
+fn _update_spawners(
     mut commands: Commands,
     mut spawner_handler: ResMut<SpawnerManager>,
     time: Res<Time>,

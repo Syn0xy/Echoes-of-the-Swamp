@@ -26,6 +26,7 @@ impl SpawnerManager {
 
 impl SpawnerConfig {
     pub fn generate_position(&self) -> Vec2 {
-        self.position_strategy.generate_position(&self.origin, self.radius)
+        self.position_strategy
+            .generate_position(&self.origin, self.radius)
     }
 }

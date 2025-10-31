@@ -4,12 +4,12 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-eots_camera = { workspace = true }
-eots_constants = { workspace = true }
-eots_creature = { workspace = true }
-eots_inventory = { workspace = true }
-eots_item = { workspace = true }
-eots_perception = { workspace = true }
-eots_skeleton_rig = { workspace = true }
-eots_terrain = { workspace = true }
-bevy = { workspace = true }
+eots_camera.workspace = true
+eots_constants.workspace = true
+eots_creature.workspace = true
+eots_inventory.workspace = true
+eots_item.workspace = true
+eots_perception.workspace = true
+eots_skeleton_rig.workspace = true
+eots_terrain.workspace = true
+bevy.workspace = true

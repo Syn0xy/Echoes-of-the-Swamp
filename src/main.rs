@@ -3,7 +3,6 @@ use eots_constants::window;
 use eots_core::states::{AppState, GameState, MenuState};
 
 mod game_plugin;
-mod ui;
 
 fn main() {
     App::new()
@@ -22,7 +21,7 @@ fn main() {
             eots_asset_manager::AssetManagerPlugin,
             eots_camera::CameraPlugin,
             game_plugin::GamePlugin,
-            ui::UIPlugin,
+            eots_ui::UIPlugin,
         ))
         .insert_state(AppState::Game)
         .insert_state(MenuState::Main)

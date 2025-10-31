@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 
-use crate::ui::menu::main_menu::styles::{BACKGROUND_COLOR, NORMAL_BUTTON_COLOR};
+use crate::menu::main_menu::styles::{BACKGROUND_COLOR, NORMAL_BUTTON_COLOR};
 
 #[derive(Component)]
 #[require(BackgroundColor(BACKGROUND_COLOR))]

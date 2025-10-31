@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-eots_constants = { workspace = true }
-eots_core = { workspace = true }
-perlin_noise = { workspace = true }
-bevy = { workspace = true }
+eots_constants.workspace = true
+eots_core.workspace = true
+perlin_noise.workspace = true
+bevy.workspace = true

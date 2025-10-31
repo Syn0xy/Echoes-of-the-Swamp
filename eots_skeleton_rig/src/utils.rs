@@ -1,3 +1,5 @@
+use std::f32::consts::{PI, TAU};
+
 use bevy::prelude::*;
 
 pub(crate) fn chain_segments(
@@ -16,10 +18,9 @@ pub(crate) fn chain_segments(
 }
 
 pub(crate) fn angle_between(a: &Vec2, b: &Vec2) -> f32 {
-    (b.y - a.y).atan2(b.x - a.x).to_degrees()
+    (b.y - a.y).atan2(b.x - a.x)
 }
 
-pub(crate) fn vec2_from_angle_deg(angle_deg: f32) -> Vec2 {
-    let angle_rad = angle_deg.to_radians();
-    Vec2::new(angle_rad.cos(), angle_rad.sin()).normalize_or_zero()
+pub(crate) fn angle_diff_signed(a1: f32, a2: f32) -> f32 {
+    (a2 - a1 + PI).rem_euclid(TAU) - PI
 }

@@ -1,6 +1,5 @@
 use eots_skeleton_rig::{
-    SegmentDescription,
-    descriptions::{SegmentType, SkeletonRigDescription, SkeletonSegmentDescription},
+    SegmentDescription, SegmentType, SkeletonRigDescription, SkeletonSegmentDescription,
 };
 
 use crate::creature::CreatureData;
@@ -25,6 +24,7 @@ pub(super) const DATA: CreatureData = CreatureData {
 };
 
 pub(super) const SKELETON_RIG: SkeletonRigDescription = SkeletonRigDescription {
+    segment_chain_constraint: 2.0,
     segments: &[
         SkeletonSegmentDescription {
             segment: SegmentDescription {
@@ -56,7 +56,9 @@ pub(super) const SKELETON_RIG: SkeletonRigDescription = SkeletonRigDescription {
                 length_offset: LENGTH_OFFSET,
                 radius: 0.4,
             },
-            childs: &[ONE_LEG, ONE_LEG],
+            childs: &[
+                // ONE_LEG, ONE_LEG
+                ],
         },
         SkeletonSegmentDescription {
             segment: SegmentDescription {
@@ -80,7 +82,145 @@ pub(super) const SKELETON_RIG: SkeletonRigDescription = SkeletonRigDescription {
                 length_offset: LENGTH_OFFSET,
                 radius: 0.4,
             },
-            childs: &[ONE_LEG, ONE_LEG],
+            childs: &[
+                // ONE_LEG, ONE_LEG
+            ],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
+        },
+        SkeletonSegmentDescription {
+            segment: SegmentDescription {
+                segment_type: SegmentType::Tail,
+                length_offset: LENGTH_OFFSET,
+                radius: 0.4,
+            },
+            childs: &[],
         },
         SkeletonSegmentDescription {
             segment: SegmentDescription {
@@ -125,7 +265,7 @@ pub(super) const SKELETON_RIG: SkeletonRigDescription = SkeletonRigDescription {
     ],
 };
 
-const ONE_LEG: SkeletonSegmentDescription = SkeletonSegmentDescription {
+const _ONE_LEG: SkeletonSegmentDescription = SkeletonSegmentDescription {
     segment: SegmentDescription {
         segment_type: SegmentType::Joint,
         length_offset: 0.4,

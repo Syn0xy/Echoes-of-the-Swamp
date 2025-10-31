@@ -1,8 +1,8 @@
 use bevy::prelude::*;
 
 use crate::{
-    IKRigRoot, IKRigTarget, SegmentDistance, SegmentState, SkeletonRig,
-    descriptions::{SegmentType, SkeletonRigDescription, SkeletonSegmentDescription},
+    IKRigRoot, IKRigTarget, SegmentDistance, SegmentState, SegmentType, SkeletonRig,
+    descriptions::{SkeletonRigDescription, SkeletonSegmentDescription},
 };
 
 pub fn build_skeleton_rig(commands: &mut Commands, description: &SkeletonRigDescription) -> Entity {
@@ -30,6 +30,8 @@ pub fn build_skeleton_rig(commands: &mut Commands, description: &SkeletonRigDesc
     commands.entity(root).insert(SkeletonRig {
         main_segment: segments.first().copied(),
         segments,
+        segment_chain_constraint: description.segment_chain_constraint,
+        look_at_target: None,
     });
 
     root

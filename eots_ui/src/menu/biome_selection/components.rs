@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 use eots_constants::biome::BiomeId;
 
-use crate::ui::menu::biome_selection::styles::{BACKGROUND_COLOR, NORMAL_BUTTON_COLOR};
+use crate::menu::biome_selection::styles::{BACKGROUND_COLOR, NORMAL_BUTTON_COLOR};
 
 #[derive(Component)]
 #[require(BackgroundColor(BACKGROUND_COLOR))]

@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 use eots_core::{SessionData, states::GameState};
 
-use crate::ui::menu::biome_selection::{
+use crate::menu::biome_selection::{
     components::BiomeSelectorButton,
     styles::{HOVERED_BUTTON_COLOR, NORMAL_BUTTON_COLOR, PRESSED_BUTTON_COLOR},
 };

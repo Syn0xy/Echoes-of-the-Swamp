@@ -1,9 +1,8 @@
-use bevy::prelude::*;
-
 use crate::SegmentDescription;
 
 #[derive(Debug, Clone, Copy)]
 pub struct SkeletonRigDescription {
+    pub segment_chain_constraint: f32,
     pub segments: &'static [SkeletonSegmentDescription],
 }
 
@@ -11,16 +10,4 @@ pub struct SkeletonRigDescription {
 pub struct SkeletonSegmentDescription {
     pub segment: SegmentDescription,
     pub childs: &'static [SkeletonSegmentDescription],
-}
-
-#[derive(Reflect, Debug, Clone, Copy)]
-pub enum SegmentType {
-    Head,
-    Body,
-    Joint,
-    Foot {
-        distance_from_root: f32,
-        distance_threshold: f32,
-    },
-    Tail,
 }

@@ -2,7 +2,7 @@ use bevy::prelude::*;
 use eots_constants::biome::BiomeId;
 use eots_core::SessionData;
 
-use crate::ui::menu::biome_selection::{
+use crate::menu::biome_selection::{
     components::{BiomeSelectionMenu, BiomeSelectorButton},
     styles::{BUTTON_FONT_SIZE, NORMAL_BUTTON_TEXT_COLOR, TEXT_FONT_PATH},
 };

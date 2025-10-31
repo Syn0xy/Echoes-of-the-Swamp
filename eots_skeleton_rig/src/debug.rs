@@ -1,6 +1,8 @@
 use bevy::prelude::*;
 
-use crate::{SegmentDescription, SegmentState, descriptions::SegmentType, utils};
+use crate::{SegmentDescription, SegmentState, SegmentType};
+
+const ANGLE_LINE_COLOR: Color = Color::linear_rgb(1.0, 1.0, 1.0);
 
 const fn get_segment_type_color(segment_type: &SegmentType) -> Color {
     match segment_type {
@@ -12,26 +14,23 @@ const fn get_segment_type_color(segment_type: &SegmentType) -> Color {
     }
 }
 
-pub fn draw_segment_gizmos(
+pub(crate) fn draw_segment_gizmos(
     mut gizmos: Gizmos,
-    segment_q: Query<(Entity, &GlobalTransform, &SegmentDescription)>,
-    segment_state: Query<&SegmentState>,
+    segment_q: Query<(&GlobalTransform, &SegmentDescription, &SegmentState)>,
 ) {
-    for (entity, transform, segment_description) in &segment_q {
+    for (transform, desc, state) in &segment_q {
         let position = transform.translation().truncate();
 
         gizmos.circle_2d(
             position,
-            segment_description.radius,
-            get_segment_type_color(&segment_description.segment_type),
+            desc.radius,
+            get_segment_type_color(&desc.segment_type),
         );
 
-        if let Ok(SegmentState { angle, .. }) = segment_state.get(entity) {
-            gizmos.line_2d(
-                position,
-                position + utils::vec2_from_angle_deg(*angle) * segment_description.length_offset,
-                Color::linear_rgb(1.00, 1.0, 1.0),
-            );
-        }
+        gizmos.line_2d(
+            position,
+            position + Vec2::from_angle(state.angle) * desc.length_offset,
+            ANGLE_LINE_COLOR,
+        );
     }
 }

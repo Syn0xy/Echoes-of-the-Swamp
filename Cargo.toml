@@ -4,10 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [profile.release]
-opt-level = 3
-lto = "thin"
+opt-level = 2
+lto = "off"
 incremental = true
-codegen-units = 1
+codegen-units = 8
 
 [build-dependencies]
 embed-resource = "3.0.3"
@@ -26,6 +26,7 @@ members = [
     "eots_skeleton_rig",
     "eots_spawner",
     "eots_terrain",
+    "eots_ui",
     ".",
 ]
 
@@ -42,6 +43,7 @@ eots_player = { path = "./eots_player" }
 eots_skeleton_rig = { path = "./eots_skeleton_rig" }
 eots_spawner = { path = "./eots_spawner" }
 eots_terrain = { path = "./eots_terrain" }
+eots_ui = { path = "./eots_ui" }
 perlin_noise = { git = "https://github.com/Syn0xy/personal-perlin-noise", branch = "main" }
 rand = "0.9.2"
 bevy = "0.17.1"
@@ -57,18 +59,18 @@ serde = "1.0.228"
 serde_json = "1.0.145"
 
 [dependencies]
-eots_asset_manager = { workspace = true }
-eots_camera = { workspace = true }
-eots_constants = { workspace = true }
-eots_core = { workspace = true }
-eots_creature = { workspace = true }
-eots_inventory = { workspace = true }
-eots_item = { workspace = true }
-eots_perception = { workspace = true }
-eots_player = { workspace = true }
-eots_skeleton_rig = { workspace = true }
-eots_spawner = { workspace = true }
-eots_terrain = { workspace = true }
-bevy = { workspace = true }
-log = { workspace = true }
-bevy-inspector-egui = { workspace = true }
+eots_asset_manager.workspace = true
+eots_camera.workspace = true
+eots_constants.workspace = true
+eots_core.workspace = true
+eots_creature.workspace = true
+eots_inventory.workspace = true
+eots_item.workspace = true
+eots_perception.workspace = true
+eots_player.workspace = true
+eots_skeleton_rig.workspace = true
+eots_spawner.workspace = true
+eots_terrain.workspace = true
+eots_ui.workspace = true
+bevy.workspace = true
+log.workspace = true

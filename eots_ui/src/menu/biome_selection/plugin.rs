@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 use eots_core::states::{AppState, GameState};
 
-use crate::ui::menu::biome_selection::systems::interact_with_biome_selector_button;
+use crate::menu::biome_selection::systems::interact_with_biome_selector_button;
 
 use super::systems::{despawn_biome_selection_menu, spawn_biome_selection_menu};
 
